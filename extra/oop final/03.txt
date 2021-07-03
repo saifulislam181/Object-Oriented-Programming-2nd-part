@@ -1,0 +1,33 @@
+public class string {
+
+    public static void main(String[] args) {
+        String s1="apple";
+        String s2="apple";
+        if(s1.equalsIgnoreCase(s2)){
+            System.out.println("equal");
+        }
+        s1="Haysvapplebangladeshappledfhb";
+        System.out.println(s1.indexOf("apple"));
+        System.out.println(s1.lastIndexOf("apple"));
+        System.out.println("After convert   :"+s1.substring(10, 20));
+        String s3=new String(s1);
+        System.out.println("The substring Length:"+s3.length());
+
+
+        s1="Absiapplembappeappleghhshsapplechdk";
+        System.out.println(s1.indexOf("apple"));
+        System.out.println(s1.lastIndexOf("apple"));
+        System.out.println("After convert   :"+s1.substring(8, 11)+" "+s1.substring(20, 26)
+                +" "+s1.substring(31, 35));
+
+
+        s1="Ansapplevfbifrv";
+        System.out.println(s1.indexOf("apple"));
+        System.out.println(s1.lastIndexOf("apple"));
+        System.out.println("Not Applicable");
+
+
+
+    }
+
+}
