@@ -1,0 +1,106 @@
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class Foot_Inch_b extends JFrame
+{
+    JLabel labelFoot;
+    JLabel labelInch;
+
+    JTextField textFoot;
+    JTextField textInch;
+
+    JButton button1;
+    JButton button2;
+
+    JPanel panel;
+    public Foot_Inch_b()
+    {
+        super("Converter");
+
+
+        labelFoot = new JLabel("Foot",SwingConstants.LEFT);
+        labelFoot.setBounds(80,10,130,30);
+
+
+        textFoot = new JTextField();
+        textFoot.setBounds(180, 13, 130, 25);
+
+
+        button1 = new JButton("Convert to Inch");
+        button1.setBounds(50,50,120,20);
+        button2 = new JButton("Convert to Foot");
+        button2.setBounds(180,50,120,20);
+
+
+
+        labelInch = new JLabel("Inch",SwingConstants.LEFT);
+        labelInch.setBounds(80,90,130,30);
+
+
+        textInch = new JTextField();
+        textInch.setBounds(180, 93, 130, 25);
+
+
+
+        panel = new JPanel(null);
+        panel.add(labelFoot);
+        panel.add(labelInch);
+        panel.add(button1);
+        panel.add(button2);
+        panel.add(textFoot);
+        panel.add(textInch);
+
+        add(panel);
+
+        button1.addActionListener(new ButtonListener1() );
+        button2.addActionListener(new ButtonListener2() );
+    }
+
+
+    private class ButtonListener1 implements ActionListener
+    {
+        @Override
+        public void actionPerformed(ActionEvent e)
+        {
+            if (e.getSource() == button1)
+            {
+                //1 foot = 12 Inch
+                float button1 = (float) ((Double.parseDouble(textFoot.getText())) * 12);
+
+                textInch.setText(button1+"");
+                textFoot.requestFocus();
+                textFoot.selectAll();
+            }
+        }
+
+    }
+
+    private class ButtonListener2 implements ActionListener
+    {
+        @Override
+        public void actionPerformed(ActionEvent e)
+        {
+            if (e.getSource() == button2)
+            {
+                //12 Inch = 1 foot
+                float button2 = (float) ((Double.parseDouble(textInch.getText())) / 12);
+                //float button2 = (float) (12 / (Double.parseDouble(textInch.getText())));
+
+                textFoot.setText(button2+"");
+                textInch.requestFocus();
+                textInch.selectAll();
+            }
+        }
+
+    }
+
+    public static void main(String[] args)
+    {
+        Foot_Inch_b app = new Foot_Inch_b();
+        app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        app.setSize(400,170);
+        app.setVisible(true);
+    }
+}
+//

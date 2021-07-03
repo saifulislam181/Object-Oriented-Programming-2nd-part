@@ -1,0 +1,24 @@
+interface one {
+    public void x();
+}
+interface two extends one{
+    String name="Hello";
+}
+class three implements one,two{
+    public void y(){
+        System.out.println("two");
+    }
+    public void x(){
+        System.out.println("one");
+    }
+}
+
+
+
+public class test{
+    public static void main(String[] args) {
+        three th=new three();
+        System.out.println(th.name);
+        th.y();
+    }
+}

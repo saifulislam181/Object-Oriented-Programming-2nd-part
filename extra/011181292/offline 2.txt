@@ -1,0 +1,36 @@
+import java.io.*;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Scanner;
+
+public class vowel {
+
+
+    public static void main(String[] args){
+        File f = new File("info.txt");
+
+        try
+        {
+            f.createNewFile();
+            int count=0;
+            char c;
+            FileReader fr=new FileReader(f);
+            BufferedReader bf =new BufferedReader(fr);
+            String s=bf.readLine();
+            while(s!=null){
+                for(int i=0;i<s.length();i++){
+                    c=s.charAt(i);
+                    if(c=='a' || c=='A' || c=='e' || c=='E' ||c=='i' ||c=='I' || c=='o' || c=='O' ||c=='u' ||c=='U' )
+                        count++;
+                }
+
+            }
+            System.out.println(count);
+
+        }catch(IOException e){
+            System.out.println(e);
+        }
+
+    }
+}

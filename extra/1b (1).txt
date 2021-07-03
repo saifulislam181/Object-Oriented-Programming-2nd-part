@@ -1,0 +1,57 @@
+package exampletest111;
+
+/**
+ *
+ * @author USER
+ */
+public class Animal {
+    String type;
+    
+}
+
+
+public interface Flyable {
+    public void canfly();
+        
+    
+}
+
+
+
+public interface Floatable {
+    public void canfloat();
+        
+
+}
+
+
+public  class Coal extends Animal implements Flyable,Floatable
+{
+ String s, s1;
+    Coal(String s, String s1)
+    {
+        this.s = s;
+        this.s1 = s1;
+        this.type = s1;
+    }
+    public void canfloat() {
+      System.out.println(s + " can float in the sky");
+    }
+ 
+    public void canfly() {
+       System.out.println(s + " can fly in the sky");
+    }
+ 
+}
+
+
+    
+    public static void main(String[] args) {
+        Coal fy = new Coal("Sparrow","Bird");
+        System.out.println(fy.type);
+        fy.canfly();
+        fy.canfloat();
+    
+    }
+    
+}

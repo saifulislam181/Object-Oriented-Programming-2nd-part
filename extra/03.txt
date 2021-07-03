@@ -1,0 +1,39 @@
+import java.io.*;
+import java.io.FileNotFoundException;
+
+import java.util.Scanner;
+
+
+
+public class Multicatch {
+    public static void main(String[] args) {
+        try {
+            Scanner sc = new Scanner(System.in);
+            int i = sc.nextInt();
+            String mystring[] = new String[i];
+            if (mystring[0].equals("java!")) {
+                System.out.println("First word is Java");
+            }
+            int x = 18 / i;
+            int y[] = {555, 999};
+            y[i] = x;
+
+
+        }
+        catch(ArithmeticException e) {
+            System.out.println("Divide by 0: " + e);
+        } catch(ArrayIndexOutOfBoundsException e) {
+            System.out.println("Array index oob: " + e);
+        }
+        catch (NumberFormatException e){
+            System.out.println("Number format" + e);
+        }
+
+        catch (Exception e) {
+            System.out.println("This Exception is"+e);
+        }
+        finally {
+            System.out.println("Thankyou for Try ");
+        }
+    }
+}

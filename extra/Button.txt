@@ -1,0 +1,94 @@
+import javax.swing.*;
+import javax.swing.plaf.basic.BasicOptionPaneUI;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.jar.JarFile;
+
+public class Button extends JFrame
+{
+
+    int button1Color = 1;
+    int button2Color = 1;
+
+    public Button()
+    {
+        JFrame frame = new JFrame("Problem-1");
+
+        frame.setSize(300,150);
+
+        JPanel panel1 = new JPanel();
+
+
+        JButton button1 = new JButton("Button1");
+        JButton button2 = new JButton("Button2");
+
+        button1.setBackground(Color.YELLOW);
+        button2.setBackground(Color.RED);
+
+        button1.setFont(new Font("Font.SANS_SERIF",Font.BOLD+Font.ITALIC,14));
+        button2.setFont(new Font("Font.SANS_SERIF",Font.BOLD+Font.ITALIC,14));
+
+        panel1.add(button1);
+        panel1.add(button2);
+
+        frame.add(panel1);
+
+        frame.setSize(300,300);
+
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
+        frame.setVisible(true);
+
+        button1.addActionListener(new ActionListener()
+        {
+
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                String frame = e.getActionCommand();
+                System.out.println(frame +" clicked");
+
+
+
+                if(button1Color == 1)
+                {
+                    button1.setBackground(Color.YELLOW);
+                    button1Color = 2;
+                }
+                else
+                {
+                    button1.setBackground(Color.GREEN);
+                    button1Color = 1;
+                }
+            }
+        });
+
+        button2.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                String frame = e.getActionCommand();
+                System.out.println(frame +" clicked");
+
+                if( button2Color == 1)
+                {
+                    button2.setBackground(Color.BLUE);
+                    button2Color = 2;
+                }
+                else
+                {
+                    button2.setBackground(Color.CYAN);
+                    button2Color = 1;
+                }
+            }
+        });
+        frame.setLayout(null);
+    }
+
+    public static void main(String[] args)
+    {
+        Button m = new Button();
+    }
+}

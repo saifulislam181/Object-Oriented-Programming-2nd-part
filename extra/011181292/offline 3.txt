@@ -1,0 +1,68 @@
+public interface project   {
+     public double revenue ();
+     public double total_tax ();
+
+}
+
+
+
+public class public_project implements project   {
+     String project_name;
+     double estimated_revenue;
+     double tax ;
+    public_project(String name, double ev, double tx)
+    {
+       String project_name=name;
+       double estimated_revenue=ev;
+       double tax=tx;
+    }
+
+    public double revenue () {
+        return estimated_revenue*0.9;
+    }
+    public double total_tax () {
+        return tax;
+    }
+
+}
+
+
+public class private_project implements project  {
+    String project_name;
+    double estimated_revenue;
+    double tax ;
+
+   public private_project (String name, double ev, double tx)
+    {
+       String project_name=name;
+        double estimated_revenue=ev;
+        double tax=tx;
+
+    }
+    public double revenue () {
+        return estimated_revenue*0.8;
+    }
+    public void  total_tax () {
+
+        return double tax*1.1;
+    }
+
+
+
+public class main {
+    public static void main(String[] args) {
+        public_project p=new public_project("saiful",12,50.50)
+
+        System.out.println("Name: "+"name"+ev+tx);
+        public void revenue();
+
+        private_project pp=new private_project("islam",20,100.50);
+        System.out.println("Name: "+"name"+ev+tx);
+        public void  total_tax();
+
+    }
+}
+
+
+
+}

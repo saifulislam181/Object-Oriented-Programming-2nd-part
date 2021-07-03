@@ -1,0 +1,33 @@
+import java.io.FileNotFoundException;
+
+public class TestAgain {
+    public static void main(String[] args) {
+        try {
+            int N = 24;
+            int[]divisors={2,3,0,4};
+            for (int i=0;i<6;i++){
+                int div=divisors[i];
+                int x=N/div;
+                System.out.println("success");
+            }
+
+        }
+        catch (ArithmeticException e){
+            System.out.println("ArithmeticException caught");
+
+        }
+        catch (ArrayIndexOutOfBoundsException e){
+            System.out.println("ArrayIndexOutOfBoundsException caught");
+        }
+        catch (NumberFormatException e){
+            System.out.println(e);
+        }
+        catch (Exception e){
+            System.out.println(e);
+        }
+        finally{
+            System.out.println("Exit code");
+        }
+
+    }
+}

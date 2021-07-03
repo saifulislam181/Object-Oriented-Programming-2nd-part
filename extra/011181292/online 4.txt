@@ -1,0 +1,110 @@
+public class student {
+    
+    public int id;
+    public String StudentName;
+    public double physics_marks;
+    public double chemistry_marks;
+     double math_marks;
+     
+    public student(){}
+    public student(int id,String StudentName,double physics_marks, double chemistry_marks, double math_marks){
+        this.id=id;
+        this.StudentName=StudentName;
+        this.physics_marks = physics_marks;
+        this.chemistry_marks = chemistry_marks;
+        this.math_marks = math_marks; 
+
+    }
+     @Override
+    public String toString(){
+        return " StudentName: "+this.StudentName +" Student id: "+this.id+" physics_marks: "+this.physics_marks+" chemistry_marks: "+this.chemistry_marks+" math_marks: "+this.math_marks;
+    }
+}
+
+
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Scanner;
+
+
+public class Online4 {
+
+    
+    public static void main(String[] args) {
+        
+        LinkedList <student>list = new LinkedList <student>();
+        student s1 = new student;
+        linklist list;
+        list1.add(new StudentName);
+        list2.add(new physics_marks);
+        list3.add(new chemistry_marks);
+        list4.add(new math_marks);
+      
+        
+        int n=0;
+        student[]s = null;
+        int n;
+        int id;
+        String StudentName ;
+        double physics_marks;
+        double chemistry_marks;
+        double math_marks;
+        
+          
+       File dir = new File("student");
+        dir.mkdir();
+        String path = dir.getAbsolutePath();
+        
+        File f;
+        f = new File(path+"/info.txt");
+        Scanner input = new Scanner(System.in);
+        System.out.println("how many students : ");
+        int num = input.nextInt();
+         LinkedList<String> arrl = new LinkedList<String>();
+        adding elements to the end
+       
+        
+        try{
+        File f=new File("info.txt");
+        LinkedList<student> arr= new LinkedList<student>();
+        Scanner in=new Scanner(f);
+         
+        
+        n=in.nextInt();
+      
+        s=new student[n];
+        for(int i=0;i<n;i++){
+            
+            id=in.nextInt();
+            StudentName=in.next();
+            physics_marks=in.nextDouble();
+            chemistry_marks=in.nextDouble();
+           math_marks=in.nextDouble();
+            s[i]=new student(id,StudentName,physics_marks,chemistry_marks,math_marks);
+            arr.add(new student(id,StudentName,physics_marks,chemistry_marks,math_marks));
+           
+      
+  
+      
+        Iterator<String> itr = arrl.iterator();
+        while(itr.hasNext()){
+            System.out.println(itr.next());*/
+        }
+        
+         }catch(FileNotFoundException e){
+         }
+       
+        for(int i=0;i<n;i++){
+            System.out.println(s[i]);
+              System.out.println( arr1.add());
+               Iterator<student> itr = arr.iterator();
+        while(itr.hasNext()){
+            System.out.println(itr.next());
+            
+        }
+        }
+        
+    }
